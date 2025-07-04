@@ -1,0 +1,39 @@
+
+.navbar-container {
+border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/* Botón dentro del formulario */
+form.d-flex button {
+  border-radius: 30px; /* se aplica mejor con px */
+  width: 100px;
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #aaaaaa;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form.d-flex button:hover {
+  background-color:#aaaaaa;
+  border-radius: 50px;
+}
+
+/* Campo de texto dentro del formulario */
+form.d-flex input {
+ border-radius: 50px;
+  border: 1px solid #ccc;
+  padding: 0.5rem 1rem;
+  outline: none;
+  flex: 1; /* para ocupar el espacio disponible */
+  transition: border-color 0.2s ease;
+}
+
+form.d-flex input:focus {
+  border-color: #62676d;
+  border-radius: 50px;
+}
+

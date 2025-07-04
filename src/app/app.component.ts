@@ -1,11 +1,14 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { LogoComponent } from "./Core/Components/logo/logo.component";
+import { NavbarComponent } from "./Core/navbar/navbar.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
+  imports: [RouterOutlet, LogoComponent, NavbarComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css'] // ← también arregla el nombre de esta propiedad (es **styleUrls**, no styleUrl)
 })
 export class AppComponent {
   title = 'mac';
