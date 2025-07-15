@@ -1,39 +1,32 @@
-
-.navbar-container {
-border-radius: 40px;
-  display: flex;
+.container{
+  background-color: rgb(223, 220, 220);
+  border-radius: 2%;
+  border: 6px solid white;
+  cursor: pointer;
+  box-shadow: 6px 6px rgba(0, 0, 0, 0.1);
+   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-/* Botón dentro del formulario */
-form.d-flex button {
-  border-radius: 30px; /* se aplica mejor con px */
-  width: 100px;
-  padding: 0.5rem 1rem;
-  border: none;
-  background-color: #aaaaaa;
-  color: #fff;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+.nav-link {
+  transition: all 0.3s ease;
 }
 
-form.d-flex button:hover {
-  background-color:#aaaaaa;
-  border-radius: 50px;
+.nav-link:hover {
+  font-weight: bold;
+  font-size: 1.15rem;
+  color: black;
+box-shadow: 6px 6px 16px rgba(0, 0, 0, 0.15);
+background-color: rgba(255, 255, 255, 0.733);
+border-radius: 10px;
 }
 
-/* Campo de texto dentro del formulario */
-form.d-flex input {
- border-radius: 50px;
-  border: 1px solid #ccc;
-  padding: 0.5rem 1rem;
-  outline: none;
-  flex: 1; /* para ocupar el espacio disponible */
-  transition: border-color 0.2s ease;
+.dropdown-item {
+  transition: all 0.3s ease;
 }
 
-form.d-flex input:focus {
-  border-color: #62676d;
-  border-radius: 50px;
+.dropdown-item:hover {
+  font-weight: bold;
+  font-size: 1.1rem;
 }
 
