@@ -2,7 +2,8 @@
   align-items: center;
   text-align: left;
   margin-top: 30px;
-  margin-left: 200px;
+ margin-left: 50px;
+
   margin-bottom: 40px;
   padding: 20px 0;
   max-width: 600px;
@@ -125,6 +126,7 @@
   transform: scale(0.8);
   transition: opacity 0.5s ease, transform 0.5s ease;
   border-radius: 60%;
+   justify-content: center;
 
 }
 /* Mostrar la imagen con animación cuando se hace hover */
@@ -136,4 +138,21 @@
 
 
 
+.typing-text {
+  display: inline-block; /* <-- MUY IMPORTANTE */
+  min-height: 1.5em; /* evita que se colapse cuando borra */
+  font-size: 1.4rem;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: blink 0.7s steps(1) infinite;
+  padding: 1rem;
+  border-right: 1px solid black; /* Cambia el color del cursor */
+}
+
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
 
