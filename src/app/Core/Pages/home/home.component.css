@@ -50,10 +50,8 @@
 .default-img {
   width: 100%;
   height: 100%;
-  box-shadow: 0 45px 26px rgba(0, 0, 0, 0.15);
   object-fit: contain;
   border-radius: 10px;
   border-color: black 2px solid;
   box-shadow: 0 14px 8px rgba(0, 0, 0, 0.1); /* Opcional: sombra */
 }
-
