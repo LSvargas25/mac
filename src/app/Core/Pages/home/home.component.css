@@ -1,0 +1,59 @@
+
+.TituleContainer {
+  align-items: center;
+  text-align: left;
+  margin-top: 30px;
+  margin-left: 200px;
+  margin-bottom: 40px;
+  padding: 20px 0;
+  max-width: 600px;
+  background: transparent;
+}
+.FirstsloganContainer{
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 10px;
+  color: rgb(12, 12, 12);
+  font-size: 1.5em;
+}
+
+.carousel-container {
+  display: flex;
+  justify-content: center;
+  gap: 150px; /* Espacio entre las imágenes */
+  padding: 40px 0;
+  flex-wrap: wrap; /* Por si es responsive */
+  border-color: black 2px solid;
+
+}
+
+.slide {
+  flex: 0 0 auto;
+  width: 300px; /* Ajusta el tamaño deseado */
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 45px 26px rgba(0, 0, 0, 0.15);
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border-color: black 6px solid;
+
+}
+
+.default-img {
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 45px 26px rgba(0, 0, 0, 0.15);
+  object-fit: contain;
+  border-radius: 10px;
+  border-color: black 2px solid;
+  box-shadow: 0 14px 8px rgba(0, 0, 0, 0.1); /* Opcional: sombra */
+}
+
