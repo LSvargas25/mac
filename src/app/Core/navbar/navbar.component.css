@@ -14,11 +14,12 @@
 
 .nav-link:hover {
   font-weight: bold;
-  font-size: 1.15rem;
+  font-size: 1.20rem;
   color: black;
 box-shadow: 6px 6px 16px  rgb(223, 220, 220);
 background-color: rgba(255, 255, 255, 0.733);
-border-radius: 10px;
+border-radius: 50px;
+
 }
 
 .dropdown-item {
@@ -27,6 +28,66 @@ border-radius: 10px;
 
 .dropdown-item:hover {
   font-weight: bold;
-  font-size: 1.1rem;
+   font-size: 1.20rem;
+}
+.custom-search-btn,
+.btn-light {
+  background-color: rgba(255, 255, 255, 0.85);
+
+  border-radius: 50px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: black;
+  transition: all 0.3s ease;
+  box-shadow: 4px 4px rgba(0, 0, 0, 0.1);
+  border: rgb(255, 255, 255) 1px solid;
 }
 
+.custom-search-btn:focus,
+.btn-light:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.custom-search-btn:hover,
+.btn-light:hover {
+  transform: scale(1.1);
+  font-weight: bold;
+   font-size: 1.20rem;
+  box-shadow: 6px 6px 16px rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.85);
+
+}
+
+.icon-button {
+  box-shadow: 4px 4px rgba(0, 0, 1, 0.1);
+  transition: all 0.3s ease;
+ background-color: rgba(255, 255, 255, 0.85);
+}
+
+.icon-button:hover {
+  transform: scale(1.1);
+  box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+
+
+.icon-button i {
+  margin-left: -6px;
+  transition: all 0.3s ease;
+  width: 20px;
+}
+
+
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0;
+}
+
+
+.dropdown-menu {
+  display: none;
+  transition: all 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+}

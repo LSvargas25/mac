@@ -1,25 +1,20 @@
-
-<div class="TituleContainer">
+ <div class="TituleContainer">
   <h1>Welcome to Lamacarena Store</h1>
-  <p>“Train. Inspire. Repeat.”.</p>
+  <p>“Train. Inspire. Repeat.”</p>
 </div>
 
 <div class="FirstsloganContainer">
   <h3>The best-performing brands in the market</h3>
-
 </div>
 
-
-
- <div class="carousel-container">
-  <div class="slide" *ngFor="let item of slides">
-    <img [src]="item.image" [alt]="item.alt" [ngClass]="item.alt ? item.alt : 'default-img'"a class="dropdown-item" />
+<div class="carousel-container">
+  <div class="slide" *ngFor="let item of slides" (click)="onSlideClick(item)">
+    <div class="image-container">
+      <img [src]="item.image" [alt]="item.alt" class="default-img" />
+      <div class="overlay">
+        <img *ngIf="item.extraImage" [src]="item.extraImage" alt="Extra" class="extra-image" />
+        <h2 class="overlay-text">{{ item.overlayText }}</h2>
+      </div>
+    </div>
   </div>
 </div>
-
-
-
-
-
-
-
