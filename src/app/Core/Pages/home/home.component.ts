@@ -45,9 +45,10 @@ export class HomeComponent implements OnInit {
   ];
 
   displayedText: string = '';
-  currentTextIndex = 0;
-  charIndex = 0;
-  isDeleting = false;
+  typedHTML: string = '';
+  currentTextIndex: number = 0;
+  charIndex: number = 0;
+  isDeleting: boolean = false;
   isBrowser: boolean;
 
   constructor(
@@ -59,9 +60,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     if (this.isBrowser) {
-      setTimeout(() => {
-        this.safeTypeEffect();
-      }, 500);
+      this.safeTypeEffect();
     }
   }
 
@@ -73,6 +72,9 @@ export class HomeComponent implements OnInit {
     } else {
       this.displayedText = currentText.substring(0, this.charIndex++);
     }
+
+    // Generar HTML con cursor al final del texto actual
+    this.typedHTML = `${this.displayedText}<span class="cursor"></span>`;
 
     let delay = this.isDeleting ? 50 : 100;
 
@@ -87,7 +89,7 @@ export class HomeComponent implements OnInit {
 
     setTimeout(() => {
       if (this.isBrowser) {
-        requestAnimationFrame(() => this.safeTypeEffect());
+        this.safeTypeEffect();
       }
     }, delay);
   }
