@@ -2,11 +2,12 @@
   background-color: rgb(223, 220, 220);
   border-radius: 2%;
   border: 6px solid white;
-  cursor: pointer;
+
   box-shadow: 6px 6px rgba(0, 0, 0, 0.1);
    display: flex;
   align-items: center;
   justify-content: space-between;
+    cursor: none;
 }
 .nav-link {
   transition: all 0.3s ease;

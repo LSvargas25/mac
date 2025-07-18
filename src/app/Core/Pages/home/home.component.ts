@@ -1,6 +1,8 @@
- import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
+import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
 import { Router } from '@angular/router';
+
+declare var bootstrap: any;
 
 @Component({
   selector: 'app-home',
@@ -58,11 +60,11 @@ export class HomeComponent implements OnInit {
     this.isBrowser = isPlatformBrowser(this.platformId);
   }
 
-  ngOnInit(): void {
-    if (this.isBrowser) {
-      this.safeTypeEffect();
-    }
+ngOnInit(): void {
+  if (this.isBrowser) {
+    this.safeTypeEffect();
   }
+}
 
   safeTypeEffect(): void {
     const currentText = this.textList[this.currentTextIndex];
@@ -73,7 +75,6 @@ export class HomeComponent implements OnInit {
       this.displayedText = currentText.substring(0, this.charIndex++);
     }
 
-    // Generar HTML con cursor al final del texto actual
     this.typedHTML = `${this.displayedText}<span class="cursor"></span>`;
 
     let delay = this.isDeleting ? 50 : 100;

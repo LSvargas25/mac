@@ -1,56 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+/* TITULO PRINCIPAL */
 .TituleContainer {
   align-items: center;
   text-align: left;
   margin-top: 30px;
- margin-left: 50px;
+  margin-left: 50px;
   margin-bottom: 40px;
   padding: 20px 0;
   max-width: 600px;
   background: transparent;
-
-
+  cursor: none;
+   font-family: 'oleo script', cursive;
 }
-.FirstsloganContainer{
+
+/* SLOGAN PRINCIPAL */
+.FirstsloganContainer {
   text-align: center;
   margin-top: 20px;
   margin-bottom: 20px;
   padding: 10px;
   color: rgb(12, 12, 12);
   font-size: 1.5em;
-
-
+  cursor: none;
+   font-family: 'Special Elite', cursive;
 }
 
-
+/* CARRUSEL DE MARCAS */
 .carousel-container {
   display: flex;
   justify-content: center;
   gap: 150px;
   padding: 40px 0;
   flex-wrap: wrap;
-
 }
 
-
+/* BOTÓN DE BÚSQUEDA */
 .custom-search-btn {
-  background-color: rgb(223, 220, 220);
-  border: 2px solid black;
-  color: black;
+  background-color: #e6d3b3;
+  border: 2px solid #5e4a3a;
+  color: #3b2f25;
+  font-weight: bold;
+  padding: 10px 20px;
+  font-family: 'Special Elite', cursive;
+  transition: background-color 0.4s ease, transform 0.2s ease;
 }
 
 .custom-search-btn:hover {
   background-color: rgb(200, 198, 198);
-   border: 2px solid black; /* un tono un poco más oscuro al pasar el mouse */
+  border: 2px solid black;
 }
 
-/* Contenedor que permite posicionar texto sobre la imagen */
+/* CONTENEDOR DE IMAGEN CON TEXTO Y OVERLAY */
 .image-container {
   position: relative;
   width: 100%;
   height: 100%;
 }
 
-/* Imagen base */
+/* Imagen por defecto que se muestra */
 .default-img {
   width: 100%;
   height: 100%;
@@ -59,21 +66,19 @@
   display: block;
 }
 
-/* Overlay para oscurecer imagen al hacer hover */
+/* Overlay que cubre la imagen */
 .overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-
   border-radius: 10px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
+  padding-bottom: 20px;
   transition: background-color 0.3s ease;
-   align-items: flex-end;
-   padding-bottom: 20px;
 }
 
 /* Texto centrado sobre la imagen */
@@ -83,11 +88,10 @@
   opacity: 0;
   transition: opacity 0.3s ease;
   text-align: center;
-   background-color:rgba(223, 220, 220, 0); /* Fondo detrás del texto para mejor visibilidad */
-  padding: 2px;
+  background-color: rgba(223, 220, 220, 0);
+  padding: 1.5rem;
 }
 
-/* Al hacer hover, se oscurece la imagen y aparece el texto */
 .slide:hover .overlay {
   background-color: rgb(223, 220, 220);
 }
@@ -96,11 +100,11 @@
   opacity: 1;
 }
 
-/* Ya tienes este pero te lo incluyo por claridad */
+/* Estilos del slide */
 .slide {
   flex: 0 0 auto;
-  width: 300px;
-  height: 350px;
+   width: 400px; /* Aumentamos ancho */
+  height: 700px; /* Aumentamos alto */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -112,30 +116,32 @@
   transition: transform 0.10s ease;
 }
 
-.slide:hover {
+.carousel-container .slide:hover {
   transform: scale(1.20);
 }
+
+#carouselExampleIndicators .carousel-image:hover,
+.carousel-slide:hover {
+  transform: none !important;
+}
+
 /* Imagen secundaria que aparece encima */
 .extra-image {
   position: absolute;
   width: 250px;
   height: 230px;
-  bottom: 80px; /* posición más arriba del texto */
+  bottom: 80px;
   opacity: 0;
   transform: scale(0.8);
   transition: opacity 0.5s ease, transform 0.5s ease;
   border-radius: 60%;
-   justify-content: center;
-
+  justify-content: center;
 }
-/* Mostrar la imagen con animación cuando se hace hover */
+
 .slide:hover .extra-image {
   opacity: 1;
   transform: scale(1) rotate(3deg);
 }
-
-
-
 
 .typing-text {
   display: inline-block;
@@ -158,24 +164,111 @@
 }
 
 @keyframes blink {
-  0%, 100% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
 }
 
-.center-image-container {
+/* CARRUSEL SECUNDARIO DE MARCAS */
+.custom-carousel-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-
+  margin-bottom: 100px;
+  padding: 20px;
 }
 
-.center-image {
-  max-width: 80%; /* ajusta el tamaño según lo que necesités */
-  max-height: 80vh;
-  object-fit: contain; /* mantiene proporciones sin recortar */
+.carousel-inner {
+  margin-left: 20px;
+}
+
+/* CARRUSEL DE PROMOCIONES PERSONALIZADO */
+#carouselPromo {
+  position: relative;
+  width: 100%;
+  height: 600px; /* altura fija que vos querés */
+  margin: 150px auto 100px auto;
+  padding: 20px;
+  margin-left: 0px;
+  margin-top: 200px;
+  margin-bottom: 100px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid black;
+}
+
+
+/* Cada slide del carrusel promocional */
+#carouselPromo .promo-slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: translateX(100%);
+  animation: slidePromo 9s ease-in-out infinite;
+}
+
+
+/* Animación individual por imagen */
+#carouselPromo .promo-slide:nth-child(1) {
+  animation-delay: 3s;
+}
+#carouselPromo .promo-slide:nth-child(2) {
+  animation-delay: 6s;
+}
+#carouselPromo .promo-slide:nth-child(3) {
+  animation-delay: 9s;
+}
+
+@keyframes slidePromo {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  10% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  33% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  43% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
+
+
+/* Imagen dentro del carrusel promocional */
+.carousel-image {
+
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background-color: #000000; /* ✅ muestra toda la imagen */
+  display: contain;
+  margin: auto;
+}
+
+
+
+/* Estilos responsive */
+@media (max-width: 768px) {
+  #carouselPromo {
+    margin-top: 100px;
+    margin-bottom: 80px;
+  }
+
+  .carousel-image {
+    max-height: 400px;
+  }
 }
